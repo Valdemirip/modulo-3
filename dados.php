@@ -6,7 +6,7 @@ $login = htmlspecialchars($_POST['login']);
 $password = htmlspecialchars($_POST['password']);
 $mensagem = null;
 
-if ($login == "admin" && $password == "12345") {
+if ($login == "admin" && $password == "admin") {
     $mensagem =  "Login realizado com sucesso!";
 } else {
     $mensagem = "Login ou senha incorretos!";
