@@ -19,6 +19,7 @@ if ($login == "admin" && $password == "admin") {
 ?>
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,16 +28,17 @@ if ($login == "admin" && $password == "admin") {
 </head>
 <body>
     <form action = "dados.php" method="POST">
-        <input type = "text" name="login" placeholder = "Digite o Login">
-        <br>
-        <br>
+        
+        <input type = "text" name = "login"  placeholder = "Digite o Usuário">
+    
         <input type = "password" name="password" placeholder = "Digite a senha">
+
         
         <input type = "submit" value="enviar">
     </form>
 <?php
     echo $mensagem
 ?>
-
+ 
 </body>
 </html>
