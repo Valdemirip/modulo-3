@@ -4,12 +4,13 @@ if (!empty($_POST['login'] && !empty($_POST['password']))) {
 
 $login = htmlspecialchars($_POST['login']);
 $password = htmlspecialchars($_POST['password']);
-$mensagem = null;
+
+
 
 if ($login == "admin" && $password == "admin") {
     $mensagem =  "Login realizado com sucesso!";
 } else {
-    $mensagem = "Login ou senha incorretos!";
+    $mensagem = "Falha no Login!";
 }
 
 } else {
@@ -29,16 +30,21 @@ if ($login == "admin" && $password == "admin") {
 <body>
     <form action = "dados.php" method="POST">
         
-        <input type = "text" name = "login"  placeholder = "Digite o Usuário">
-    
-        <input type = "password" name="password" placeholder = "Digite a senha">
+        <input type = "text" name = "login"  placeholder = "Digite o Login" value = "<?= $login ?? '' ?>"/>
 
-        
-        <input type = "submit" value="enviar">
+        <input type = "password" name="password" placeholder = "Digite a senha" value = "<?= $password ?? '' ?>"/>
+
+        <input type = "submit" value="enviar"/>
+
     </form>
-<?php
-    echo $mensagem
-?>
- 
+
+
+
+     <?php
+   if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+   echo $mensagem;
+   }
+   ?>
+
 </body>
 </html>
