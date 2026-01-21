@@ -9,9 +9,11 @@
    <form method = "post" action = "login.php">
     <label for = "username">Username:</label>
     <input type= "text" name = "usuario"> <br/></label>
+    <br/>
     <label for = "password">Senha:</label>
     <input type= "password" name = "Senha"> <br/></label>
-    <label for = "lembvrar">Tema Preferido:</label>
+    <br/>
+    <label for = "lembrar">Tema Preferido:</label>
     
     <select name ="tema">
         <option value = "escuro">Escuro</option>
